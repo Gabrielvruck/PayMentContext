@@ -36,8 +36,8 @@ namespace Domain.Commands
         {
             AddNotifications(new Contract<Notification>()
                 .Requires()
-                .IsLowerOrEqualsThan(FirstName, 3, "Name.FirstName", "Nome deve conter pelo menos 3 caracteres")
-                .IsGreaterOrEqualsThan(FirstName, 40, "Name.FirstName", "Nome deve conter até 40 caracteres")
+                .IsGreaterThan(FirstName, 3, "Name.FirstName", "Nome deve conter pelo menos 3 caracteres")
+                .IsLowerOrEqualsThan(FirstName, 40, "Name.FirstName", "Nome deve conter até 40 caracteres")
             );
         }
     }

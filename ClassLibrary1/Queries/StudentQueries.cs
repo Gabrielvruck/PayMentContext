@@ -7,7 +7,7 @@ namespace Domain.Queries
     {
         public static Expression<Func<Student, bool>> GetStudentInfo(string document)
         {
-            return x => x.Document.Number == document;
+            return x => x.Document.Number.Equals(document);
         }
     }
 }

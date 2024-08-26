@@ -19,7 +19,7 @@ namespace Tests.Handlers
             command.FirstName = "Bruce";
             command.LastName = "Wayne";
             command.Document = "99999999999";
-            command.Email = "hello@vruck.io2";
+            command.Email = "hello@vruck.io";
             command.BarCode = "123456789";
             command.BoletoNumber = "1234654987";
             command.PaymentNumber = "123121";

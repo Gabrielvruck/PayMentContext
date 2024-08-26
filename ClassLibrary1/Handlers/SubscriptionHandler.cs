@@ -43,7 +43,14 @@ namespace Domain.Handlers
             var name = new Name(command.FirstName, command.LastName);
             var document = new Document(command.Document, EDocumentType.CPF);
             var email = new Email(command.Email);
-            var address = new Address(command.Street, command.Number, command.Neighborhood, command.City, command.State, command.Country, command.ZipCode);
+            var address = new Address(command.Street, 
+                command.Number, 
+                command.Neighborhood, 
+                command.City, 
+                command.State, 
+                command.Country, 
+                command.ZipCode
+            );
 
             // Gerar as Entidades
             var student = new Student(name, document, email);
@@ -76,7 +83,7 @@ namespace Domain.Handlers
             _repository.CreateSubscription(student);
 
             // Enviar E-mail de boas vindas
-            _emailService.Send(student.Name.ToString(), student.Email.Address, "bem vindo ao balta.io", "Sua assinatura foi criada");
+            _emailService.Send(student.Name.ToString(), student.Email.Address, "bem vindo ao vruck.io", "Sua assinatura foi criada");
 
             // Retornar informações
             return new CommandResult(true, "Assinatura realizada com sucesso");

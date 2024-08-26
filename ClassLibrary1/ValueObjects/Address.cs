@@ -18,7 +18,7 @@ namespace Domain.ValueObjects
 
             AddNotifications(new Contract<Address>()
                 .Requires()
-                .IsLowerOrEqualsThan(Street.Length, 2, "Address.Street", "A rua deve conter pelo menos 3 caracteres")
+                .IsGreaterThan(Street.Length, 2, "Address.Street", "A rua deve conter pelo menos 3 caracteres")
             );
         }
 
